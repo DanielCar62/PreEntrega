@@ -4,7 +4,7 @@ const CartWidgetComponent = () => {
     return(
         <div>
             <BsCart2/>
-            0
+            <span>0</span>
         </div>
     );
 };
