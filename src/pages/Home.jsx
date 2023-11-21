@@ -4,7 +4,7 @@ import axios from 'axios';
 import ItemListContainer from '../components/ItemListContainer/ItemListContainer';
 
 
-const Home = () => {
+const Home = ({greeting}) => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
@@ -13,7 +13,13 @@ const Home = () => {
         .then((res) => {setProducts(res.data.products);})
         .catch((error) => console.log(error));
     }, []);
-    return <ItemListContainer products={products}/>
+
+    return (
+        <div>
+            <h1>{greeting}</h1>
+            <ItemListContainer products={products}/>
+        </div>
+    )
 };
 
 export default Home;

@@ -20,9 +20,9 @@ const NavBarComponent = () => {
     return (
       <Navbar bg="light" data-bs-theme="light">
         <Container>
-          <Navbar.Brand><Link to={"/"}>E-commerce</Link></Navbar.Brand>
+          <Navbar.Brand>E-commerce</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link><Link style={{textDecoration: "none", color: "black"}} to={"/"}>Home</Link></Nav.Link>
             <Navbar.Collapse id="navbar-dark-example">
           <Nav>
             <NavDropdown
@@ -33,7 +33,7 @@ const NavBarComponent = () => {
               {
                 categories.map((category, index) => {
                   return (
-                    <NavDropdown.Item key={index}><Link to={`/category/${category}`}>{category}</Link></NavDropdown.Item>
+                    <NavDropdown.Item key={index}><Link style={{textDecoration: "none", color: "white"}} to={`/category/${category}`}>{category}</Link></NavDropdown.Item>
                   )
                 })
               }

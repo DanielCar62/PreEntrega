@@ -5,14 +5,15 @@ import Category from "../pages/Category";
 import Item from "../pages/Item";
 
 
+
 const MainRoutes = () => {
   return (
     <Router>
       <NavBarComponent/>
       <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/category/:categoryId" element={<Category/>} />
-        <Route path="/item/:id" element={<Item/>} />
+        <Route path="/" element={<Home greeting= {"Bienvenidos"}/>} />
+        <Route path="/category/:categoryId" element={<Category />} />
+        <Route path="/item/:id" element={<Item greeting= {"Detalle del producto"}/>} />
       </Routes>
     </Router>
   );

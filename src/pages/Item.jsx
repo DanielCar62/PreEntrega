@@ -3,7 +3,7 @@ import ItemDetailContainer from '../components/ItemDetailContainer/ItemDetailCon
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
-const Item = () => {
+const Item = ({greeting}) => {
     const [product, setProduct] = useState({});
     const {id} = useParams()
     
@@ -13,7 +13,12 @@ const Item = () => {
         .then((res) => {setProduct(res.data);})
         .catch((error) => console.log(error));
     }, [id]);
-  return <ItemDetailContainer product={product}/>
+  return (
+    <div>
+        <h1>{greeting}</h1> 
+        <ItemDetailContainer product={product}/>
+    </div>
+  )
 }
 
 export default Item

@@ -14,12 +14,12 @@ const ItemListContainer = ({products}) => {
             {products.map((product) => {
                 return(
                     <Card key={product.id} style={{ width: '18rem', padding: "5px" }}>
-                        <Link to={`/item/${product.id}`}><Card.Img variant="top" src={product.thumbnail} /></Link>
+                        <Card.Img variant="top" src={product.thumbnail} />
                         <Card.Body>
                             <Card.Title>{product.title}</Card.Title>
                             <Card.Text>{product.description}</Card.Text>
-                            <Button variant="primary">Go somewhere</Button>
-                     </Card.Body>
+                            <Button variant="primary"><Link style={{textDecoration: "none", color: "white"}} Go to={`/item/${product.id}`}>Ver detalles</Link></Button>
+                        </Card.Body>
                     </Card>
                 );
             })};
