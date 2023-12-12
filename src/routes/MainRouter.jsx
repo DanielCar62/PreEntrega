@@ -11,7 +11,7 @@ const MainRoutes = () => {
     <Router>
       <NavBarComponent/>
       <Routes>
-        <Route path="/" element={<Home greeting= {"Bienvenidos"}/>} />
+        <Route path="/" element={<Home greeting= {"Bienvenido"}/>} />
         <Route path="/category/:categoryId" element={<Category />} />
         <Route path="/item/:id" element={<Item greeting= {"Detalle del producto"}/>} />
       </Routes>
