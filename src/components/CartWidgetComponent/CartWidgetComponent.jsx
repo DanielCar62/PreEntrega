@@ -8,7 +8,7 @@ const CartWidgetComponent = () => {
     
     return(
         <div>
-            <BsCart2/>
+            <BsCart2 size={27}/>
             <span>{itemCount}</span>
         </div>
     );

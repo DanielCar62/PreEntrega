@@ -9,7 +9,8 @@ const ItemListContainer = ({products}) => {
             display: "flex",
             flexWrap: "wrap",
             justifyContent: "space-around",
-            padding: "30px"    
+            padding: "30px",
+            textAlign: "center"    
         }}>
             {products.map((product) => {
                 return(

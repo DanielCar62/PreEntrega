@@ -21,9 +21,9 @@ const ItemQuantitySelector = () => {
   }
 
   return (
-    <div>
+    <div style={{textAlign:"center"}}>
         <Button onClick={handleSubstractProduct}> - </Button>
-        <input type="number" value={quantity} disabled/>
+        <input style={{textAlign:"center"}} type="number" value={quantity} disabled/>
         <Button onClick={handleAddProduct}> + </Button>
         <AddItemButton quantity={quantity} handleResetQuantity={handleResetQuantity}/>
     </div>
